@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QTabWidget" name="tab_home">
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>Issue book</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QFrame" name="frame_3">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string>Name :-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QLineEdit" name="division">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QPushButton" name="scan_button">
+                <property name="text">
+                 <string>Scan</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>Gr No. :-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>Division :-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLineEdit" name="name">
+                <property name="dragEnabled">
+                 <bool>true</bool>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="4">
+               <widget class="QLabel" name="dis_division">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QLineEdit" name="grno">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="5">
+               <widget class="QPushButton" name="end_session">
+                <property name="text">
+                 <string>End session</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QFrame" name="frame_2">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QListWidget" name="book_issued"/>
+           </item>
+           <item row="3" column="0">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>Return book</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Name:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="return_name">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="return_scan">
+             <property name="text">
+              <string>scan</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Gr no. :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="return_grno">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Division:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="return_division">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="return_end_session">
+             <property name="text">
+              <string>End session</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QListWidget" name="return_list"/>
+           </item>
+           <item row="4" column="0">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string>search student</string>
+          </attribute>
+          <widget class="QPushButton" name="search_button">
+           <property name="geometry">
+            <rect>
+             <x>670</x>
+             <y>40</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Search</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="search">
+           <property name="geometry">
+            <rect>
+             <x>22</x>
+             <y>40</y>
+             <width>621</width>
+             <height>20</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QListWidget" name="search_list">
+           <property name="geometry">
+            <rect>
+             <x>320</x>
+             <y>110</y>
+             <width>391</width>
+             <height>192</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="search_name">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>80</y>
+             <width>151</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="search_grno">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>110</y>
+             <width>151</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="search_division">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>140</y>
+             <width>151</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_7">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>82</y>
+             <width>47</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_8">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>110</y>
+             <width>47</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Gr no.</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_9">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>140</y>
+             <width>47</width>
+             <height>13</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Division</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_10">
+           <property name="geometry">
+            <rect>
+             <x>480</x>
+             <y>59</y>
+             <width>161</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string notr="true">Issued books</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_4">
+          <attribute name="title">
+           <string>Add student</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>GR number</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Division</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="4">
+            <widget class="QLineEdit" name="add_div">
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1" colspan="4">
+            <widget class="QLineEdit" name="add_mobile">
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="4">
+            <widget class="QLineEdit" name="add_name">
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1" colspan="4">
+            <widget class="QLineEdit" name="add_email">
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>Email</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="4">
+            <widget class="QLineEdit" name="add_address">
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>Mobile no.</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" colspan="4">
+            <widget class="QLineEdit" name="add_grno">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QPushButton" name="add_student">
+             <property name="text">
+              <string>ADD</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>Address</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>Branch</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="4">
+            <widget class="QLineEdit" name="add_branch">
+             <property name="readOnly">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="8" column="2">
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_5">
+          <attribute name="title">
+           <string>Add book</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="1">
+            <widget class="QLabel" name="book_img">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="add">
+             <property name="text">
+              <string>Add Book</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="book_name"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>Author</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="book_author"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>shelf</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="book_shelf"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>Category</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="category_book"/>
+           </item>
+           <item row="6" column="1">
+            <widget class="QPushButton" name="book_add">
+             <property name="text">
+              <string>Add book</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_6">
+          <attribute name="title">
+           <string>DELETE STDUENT OR BOOK</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="2" column="0">
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>155</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1" colspan="3">
+            <widget class="QLineEdit" name="student_id"/>
+           </item>
+           <item row="1" column="2" colspan="2">
+            <widget class="QLabel" name="label_22">
+             <property name="text">
+              <string>DELETE STUDENT</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>155</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="4">
+            <widget class="QPushButton" name="student_delete">
+             <property name="text">
+              <string>DELETE</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5">
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>154</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="3">
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>123</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="4" column="2" rowspan="2" colspan="2">
+            <widget class="QLabel" name="label_23">
+             <property name="text">
+              <string>DELETE BOOK</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1" colspan="3">
+            <widget class="QLineEdit" name="book_id"/>
+           </item>
+           <item row="6" column="4">
+            <widget class="QPushButton" name="book_delete">
+             <property name="text">
+              <string>DELETE</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>154</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="7" column="3">
+            <spacer name="verticalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>124</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="2">
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_7">
+          <attribute name="title">
+           <string>Attendance</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="1" column="0">
+            <spacer name="verticalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="4" column="1">
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="label_24">
+             <property name="text">
+              <string>Total number of student :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="ad_search">
+             <property name="text">
+              <string>Search</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>169</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLineEdit" name="display_student">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="4">
+            <widget class="QLineEdit" name="ad_date"/>
+           </item>
+           <item row="2" column="0">
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>169</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="1" colspan="2">
+            <widget class="QTableWidget" name="ad_table"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
